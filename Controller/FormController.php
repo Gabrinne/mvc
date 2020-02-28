@@ -1,12 +1,11 @@
 <?php
 
-class FormController {
-    function form() {
-        require './View/form.php';
-    }
+require_once "./Controller/Controller.php";
 
-    function home() {
-        require './View/home.php';
+class FormController extends Controller {
+
+    function form() {
+        $this->view('form');
     }
 
     function post() {

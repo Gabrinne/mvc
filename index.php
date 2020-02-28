@@ -1,16 +1,21 @@
-<?php
+<?php require "autoload.php";
 
-require "Controller/FormController.php";
+use Controller\FormController;
+use Controller\HomeController;
 
-// $path = str_replace('/Aula04', '', $_SERVER['REQUEST_URI']);
-
+//Foi adicionado essa linha
+// echo  $_SERVER['REQUEST_URI'];die;
+$path = str_replace('/Aula04', '', $_SERVER['REQUEST_URI']);
+// echo  $path;die;
+//Subistittui o $_SERVER['REQUEST_URI'] pela variável $path
 switch($path) {
     case "/formulario":
         $obj = new FormController();
         $obj->form();
     break;
     case "":
-        $obj = new FormController();
+    case "/":
+        $obj = new HomeController();
         $obj->home();
     break;
     case "/post":
