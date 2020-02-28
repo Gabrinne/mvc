@@ -1,6 +1,6 @@
 <?php
 
-require "Controller/formController.php";
+require "Controller/FormController.php";
 
 // $path = str_replace('/Aula04', '', $_SERVER['REQUEST_URI']);
 
