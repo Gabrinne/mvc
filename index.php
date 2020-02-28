@@ -1,14 +1,15 @@
 <?php
 
 require "Controller/formController.php";
-// echo $_SERVER['REQUEST_URI'];die;
 
-switch($_SERVER['REQUEST_URI']) {
+// $path = str_replace('/Aula04', '', $_SERVER['REQUEST_URI']);
+
+switch($path) {
     case "/formulario":
         $obj = new FormController();
         $obj->form();
     break;
-    case "/":
+    case "":
         $obj = new FormController();
         $obj->home();
     break;
